@@ -18,7 +18,6 @@ public class NoteRequest {
     public static class Create {
         @Size(max = 1000, message = "Title too long")
         private String title;
-
         private String content;
 
         @NotNull

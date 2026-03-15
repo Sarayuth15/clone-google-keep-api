@@ -1,10 +1,7 @@
 package com.googlekeep.dto.request;
 
-import com.googlekeep.entity.enums.CollaboratorPermission;
 import com.googlekeep.entity.enums.ReminderRepeat;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Future;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -17,7 +14,6 @@ public class ReminderRequest {
         @NotNull(message = "Reminder time is required")
         @Future(message = "Reminder must be in the future")
         private LocalDateTime remindAt;
-
         private ReminderRepeat repeat = ReminderRepeat.NONE;
     }
 
